@@ -9,21 +9,20 @@ class StatusCard extends StatelessWidget {
   final String profileImg;
   final double mobile;
   final int deliveredQuantity;
-  final EdgeInsetsGeometry? padding;
+  final double? padding_horizontal;
+  final double? padding_vertical;
 
   const StatusCard(
-      {super.key, required this.name, required this.profileImg, required this.mobile, required this.deliveredQuantity, this.padding } );
+      {super.key, required this.name, required this.profileImg, required this.mobile, required this.deliveredQuantity, this.padding_horizontal , this.padding_vertical} );
 
   @override
   Widget build(BuildContext context) {
-    final CardMargin = padding ??  EdgeInsets.symmetric(
-      horizontal: context.screenWidth * 0.01,
-      vertical: context.screenHeight * 0.005,
-    );
+    final double horizontal = padding_horizontal ?? context.screenWidth * 0.03;
+    final double vertical = padding_vertical ?? context.screenHeight * 0.01;
 
     return Card(
 
-      margin: CardMargin,
+        margin: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
       child: ListTile(
           leading: CircleAvatar(
             backgroundImage: (profileImg.isNotEmpty)
