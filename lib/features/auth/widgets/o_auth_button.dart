@@ -1,4 +1,4 @@
-import 'package:farm_thoughts_web_app/core/constants/app_assets_constants.dart';
+import 'package:farm_thoughts_web_app/core/constants/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -29,7 +29,7 @@ class OAuthButton extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SvgPicture.asset(AppAssetsConstants.googleLogo, width: 20),
+              SvgPicture.asset(AppAssets.googleLogo, width: 20),
               const SizedBox(width: 12),
               const Text(
                 "Sign in with Google",

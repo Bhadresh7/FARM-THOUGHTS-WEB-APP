@@ -1,3 +1,4 @@
+import 'package:farm_thoughts_web_app/commons/widgets/k_statistics_card.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -5,6 +6,13 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [KStatisticsCard(), KStatisticsCard(), KStatisticsCard()],
+        ),
+      ),
+    );
   }
 }

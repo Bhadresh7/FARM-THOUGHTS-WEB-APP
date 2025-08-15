@@ -1,3 +1,4 @@
+import 'package:farm_thoughts_web_app/commons/widgets/side_bar.dart';
 import 'package:farm_thoughts_web_app/features/auth/screens/login_screen.dart';
 import 'package:farm_thoughts_web_app/features/dashboard/screens/dashboard.dart';
 import 'package:farm_thoughts_web_app/features/splash/splash_screen.dart';
@@ -21,6 +22,11 @@ final GoRouter appRouter = GoRouter(
       path: "/dashboard",
       name: "dashboard",
       builder: (context, state) => Dashboard(),
+    ),
+    GoRoute(
+      path: "/sidebar",
+      name: "sidebar",
+      builder: (context, state) => SideBar(),
     ),
   ],
 );

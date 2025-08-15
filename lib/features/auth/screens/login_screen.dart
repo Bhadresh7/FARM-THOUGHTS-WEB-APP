@@ -1,4 +1,4 @@
-import 'package:farm_thoughts_web_app/core/constants/app_assets_constants.dart';
+import 'package:farm_thoughts_web_app/core/constants/app_assets.dart';
 import 'package:farm_thoughts_web_app/core/theme/app_colors.dart';
 import 'package:farm_thoughts_web_app/features/auth/widgets/o_auth_button.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: double.infinity,
               child: Center(
                 child: SvgPicture.asset(
-                  AppAssetsConstants.logo,
+                  AppAssets.logo,
                   height: 300,
                   width: 300,
                   color: Colors.white,
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 20),
                 OAuthButton(
-                  onPressed: () => context.pushReplacementNamed("dashboard"),
+                  onPressed: () => context.pushReplacementNamed("sidebar"),
                 ),
               ],
             ),
