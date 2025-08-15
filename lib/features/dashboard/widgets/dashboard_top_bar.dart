@@ -10,6 +10,7 @@ class DashboardTopBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
+
         boxShadow: [
           BoxShadow(
             color: Colors.black12,
