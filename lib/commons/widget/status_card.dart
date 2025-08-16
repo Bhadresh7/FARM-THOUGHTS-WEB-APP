@@ -4,6 +4,7 @@ extension MediaQueryValues on BuildContext {
   double get screenWidth => MediaQuery.of(this).size.width;
   double get screenHeight => MediaQuery.of(this).size.height;
 }
+
 class StatusCard extends StatelessWidget {
   final String name;
   final String profileImg;
@@ -12,8 +13,16 @@ class StatusCard extends StatelessWidget {
   final double? padding_horizontal;
   final double? padding_vertical;
 
-  const StatusCard(
-      {super.key, required this.name, required this.profileImg, required this.mobile, required this.deliveredQuantity, this.padding_horizontal , this.padding_vertical} );
+
+  const StatusCard({
+    super.key,
+    required this.name,
+    required this.profileImg,
+    required this.mobile,
+    required this.deliveredQuantity,
+    this.padding_horizontal,
+    this.padding_vertical,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,40 +30,25 @@ class StatusCard extends StatelessWidget {
     final double vertical = padding_vertical ?? context.screenHeight * 0.01;
 
     return Card(
-
-        margin: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
+      margin: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
       child: ListTile(
-          leading: CircleAvatar(
-            backgroundImage: (profileImg.isNotEmpty)
-                ? NetworkImage(profileImg)
-                : AssetImage('Assets/default.img')
-          ),
+        leading: CircleAvatar(
+          backgroundImage: (profileImg.isNotEmpty)
+              ? NetworkImage(profileImg)
+              : AssetImage('Assets/default.img'),
+        ),
         title: Text('$name'),
         subtitle: Text('$mobile'),
-        trailing:Row(
+        trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                const Text(
-            "litres"
-                ),
-                Text(
-                "$deliveredQuantity"
-                ),
-
-
-
-            ],
-          )
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [const Text("litres"), Text("$deliveredQuantity")],
+            ),
           ],
         ),
-
-        )
-
-
-
+      ),
     );
   }
 }
