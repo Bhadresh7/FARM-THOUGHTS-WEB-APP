@@ -1,4 +1,4 @@
-import 'package:farm_thoughts_web_app/core/constants/app_assets_constants.dart';
+import 'package:farm_thoughts_web_app/core/constants/app_assets.dart';
 import 'package:farm_thoughts_web_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -28,11 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              AppAssetsConstants.logo,
-              width: 300,
-              color: Colors.white,
-            ),
+            SvgPicture.asset(AppAssets.logo, width: 300, color: Colors.white),
           ],
         ),
       ),

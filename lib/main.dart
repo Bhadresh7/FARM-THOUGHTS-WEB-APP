@@ -1,5 +1,6 @@
 import 'package:farm_thoughts_web_app/core/router/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: appRouter,
+      theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
     );
   }
 }
