@@ -10,11 +10,7 @@ class Dashboard extends StatelessWidget {
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            KStatisticsCard(),
-            KStatisticsCard(),
-            KStatisticsCard(),
-          ],
+          children: [KStatisticsCard(), KStatisticsCard(), KStatisticsCard()],
         ),
       ),
     );
