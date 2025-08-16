@@ -55,6 +55,7 @@ class Vendour_Card extends StatelessWidget {
             ),
 
 
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
