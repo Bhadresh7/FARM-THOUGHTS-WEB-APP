@@ -13,9 +13,6 @@ class Dashboard extends StatelessWidget {
           children: [KStatisticsCard(), KStatisticsCard(), KStatisticsCard()],
         ),
       ),
-
-
-
     );
   }
 }
